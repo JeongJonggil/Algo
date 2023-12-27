@@ -22,7 +22,7 @@ def check_observe(Arr):
     return True
 
 def dfs(L, x, y):
-    if L == 3:
+    if L == 2:
         return check_observe(Arr)
 
     for i in range(x, N):
@@ -32,6 +32,7 @@ def dfs(L, x, y):
                 if dfs(L + 1, i, j + 1):
                     return True
                 Arr[i][j] = "X"
+
     return False
 
 N = int(input())
